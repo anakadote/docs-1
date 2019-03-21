@@ -121,6 +121,13 @@ routes:
   edit:              
     uses: getEdit    
     as: karma.edit
+    
+  # PUT request to /cp/addons/addon-name/{id}
+  # - using the putUpdate controller method
+  # - named karma.update, that you can reference by route('karma.update', $id)
+  put@/{id}: 
+    uses: putUpdate
+    as: karma.update
 ```
 
 Note: If you want a settings page, you do _not_ need to create a route. A `/cp/addons/addon-name/settings` route
